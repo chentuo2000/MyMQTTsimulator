@@ -1,0 +1,54 @@
+<!--index.wxml-->
+<view>
+  <view class="main-center">
+    <image src="{{imageUrl}}" class="ledinfo-avatar"></image>
+    <view class="ledinfo-values">
+      <text>湿度：</text><text>{{humidity}}</text><text>%</text>
+      <text>温度：</text><text>{{temperature}}</text><text>℃</text>
+    </view>
+  </view>
+  <text class='subheading'>设备身份三元组</text>
+  <view style='margin-top: 20rpx;'>
+    <view class='connect-info background-white'>
+      <text class='text'>productKey:</text>  
+      <input class='input' name='productKey' placeholder='' 
+      bindinput='productKeyInput'/>
+    </view>
+    <view class='connect-info background-white'>
+      <text class='text'>deviceName:</text>  
+      <input class='input' name='deviceName' placeholder='' 
+      bindinput='deviceNameInput'/>
+    </view>
+    <view class='connect-info background-white'>
+      <text class='text'>deviceSecret:</text>  
+      <input class='input' name='deviceSecret' placeholder='' 
+      bindinput='deviceSecretInput'/>
+    </view>
+  </view>
+  <view class="buttons">
+    <view  class="button-container" bindtap='online'>
+      <text class="button">设备上线</text>
+    </view>
+    <view  class="button-container" bindtap='publish'>
+      <text class="button">上报数据</text>
+    </view>
+    <view  class="button-container" bindtap='event'>
+      <text class="button">告　警</text>
+    </view>
+    <view  class="button-container" bindtap='service'>
+      <text class="button">订阅主题</text>
+    </view>
+    <view  class="button-container" bindtap='offline'>
+      <text class="button">设备下线</text>
+    </view>
+  </view>
+  <text class='subheading'>设备日志</text>
+  <view style='margin-top: 20rpx;'>
+    <view class='deviceState background-white'>
+      <text class='text'>{{deviceState}}</text>
+    </view>
+  </view>  
+  <view class='devicelog'>
+    <text>{{deviceLog}}</text>
+  </view>
+</view>
